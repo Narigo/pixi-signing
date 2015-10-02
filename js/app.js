@@ -26481,8 +26481,8 @@ function createSigner() {
 
   var options = {
     signerId : 'signature',
-    draftColor : document.getElementById('tempcolor').value,
-    color : document.getElementById('signaturecolor').value
+    draftColor : '0x' + document.getElementById('tempcolor').value,
+    color : '0x' + document.getElementById('signaturecolor').value
   };
 
   signing = new Signer(options);
@@ -26703,7 +26703,7 @@ function Signer(options) {
   canvas.height = maxHeight;
 
   self.active = true;
-  self.renderer = PIXI.autoDetectRenderer(maxWidth, maxHeight, {view : canvas});
+  self.renderer = PIXI.autoDetectRenderer(maxWidth, maxHeight, {view : canvas, antialias : true});
   self.renderer.backgroundColor = 0xFFFFFF;
 
   // create the root of the scene graph

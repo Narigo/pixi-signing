@@ -10,7 +10,25 @@ html, body {
   position: absolute;
   left: 0;
   top: 0;
-  z-index: 999; }
+  z-index: 999;
+  width: auto;
+  padding: 25px;
+  background-color: #FFFFFF;
+  border: 1px solid #000000; }
+  #options div, #options button {
+    clear: both; }
+  #options label {
+    float: left;
+    padding: 5px; }
+  #options input {
+    float: right;
+    padding: 5px; }
+  #options button {
+    display: block;
+    width: 100%;
+    padding: 5px;
+    margin-top: 25px;
+    text-align: center; }
 
 #signature {
   position: relative;
